@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  backend:
+    image: app/backend
+    environment:
+      - PORT=3000
+    env_file:
+      - ./backend/.env
+    expose:
+      - 3000
+  
+  frontend:
+    image: app/frontend
+    environment:
+      - PORT=6000
+    expose:
+      - 6000
